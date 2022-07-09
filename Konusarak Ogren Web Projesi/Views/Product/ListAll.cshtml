@@ -1,0 +1,25 @@
+﻿@using EntityLayer.Entities
+@model List<Product>
+ 
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<table class="table table-bordered">
+    <tr>
+        <th>Ürün Id</th>
+        <th>Ürün Adı</th>
+        <th>Açıklama</th>
+        <th>Renk</th>
+        <th>Boyut</th>
+        <th>Fiyat</th>
+    </tr>
+    @foreach(Product product in @Model)
+    {
+        <tr>
+            <td>@product.ProductId</td>
+            <td>@product.Name</td>
+            <td>@product.Description</td>
+            <td>@product.Color</td>
+            <td>@product.Size</td>
+            <td>@product.Price</td>
+        </tr>
+    }
+</table>

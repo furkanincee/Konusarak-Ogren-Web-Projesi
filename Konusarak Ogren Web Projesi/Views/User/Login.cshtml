@@ -1,0 +1,21 @@
+﻿@using EntityLayer.Entities
+@model User
+@{
+    Layout = null;
+}
+
+<form method="post" asp-action="Login">
+    <div class="mb-3">
+        <label class="form-label" asp-for="Email">Kullanıcı Adı</label>
+        <input asp-for="Email" class="form-control" placeholder="E-mail adresinizi giriniz">
+        <span class="text-danger" asp-validation-for="Email"></span>
+    </div>
+    <div class="mb-3">
+        <label class="form-label" asp-for="Password">Şifre</label>
+        <input asp-for="Password" type="password" class="form-control" placeholder="Şifrenizi giriniz">
+        <span class="text-danger" asp-validation-for="Password"></span>
+    </div>
+    <div class="mt-3 text-end">
+        <button type="submit">Giriş</button>
+    </div>
+</form>

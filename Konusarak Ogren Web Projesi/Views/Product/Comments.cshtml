@@ -1,0 +1,12 @@
+﻿@using EntityLayer.Entities
+@model List<Comment>
+
+<ul>
+    @foreach (Comment comment in Model)
+    {   
+        <li>
+            <h6>@comment.User.Name @comment.User.Surname</h6>
+            <p>@comment.Content</p>
+        </li>      
+    }
+</ul>
